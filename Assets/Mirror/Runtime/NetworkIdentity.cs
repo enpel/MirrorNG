@@ -948,7 +948,7 @@ namespace Mirror
             }
             else
             {
-                logger.LogWarning($"Component [{componentIndex}] not found for [netId={NetId}]");
+                if (logger.WarnEnabled()) logger.LogWarning($"Component [{componentIndex}] not found for [netId={NetId}]");
             }
         }
 
